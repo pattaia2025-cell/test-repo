@@ -1,20 +1,94 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import Reviews from '../components/Reviews.astro';
+import Coverage from '../components/Coverage.astro';
+import QuizWidget from '../components/QuizWidget.astro';
 ---
 
 <MainLayout 
   title="Кухни и шкафы-купе на заказ в Находке | Производство из МДФ и EGGER"
-  description="Заказывайте мебель на заказ в Находке напрямую от производителя. Изготовление кухонв и шкафов в Уссурийске с доставкой и установкой. Премиальные материалы."
+  description="Заказывайте изготовление мебели в Находке напрямую от производителя. Собственное производство в Уссурийске. Доставка, монтаж и бесплатный замер в Находке."
 >
   <main>
-    <section class="py-20 px-6 text-center bg-white">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Кухни и шкафы-купе на заказ в <span class="text-blue-600">Находке</span></h1>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">Доставим качественную мебель из Уссурийска в Находку. Собственное производство, использование МДФ и ЛДСП EGGER. Гарантия качества!</p>
+    <!-- Hero Section -->
+    <section class="relative bg-slate-800 text-white py-20 px-6 text-center">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+          Кухни и шкафы-купе на заказ в <span class="text-blue-400">Находке</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-30	0 mb-10">
+          Доставим и установим мебель из Уссурийска в любой уголок Находки. Собственное производство, премиальные материалы EGGER и МДФ.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#quiz" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all">
+            Записаться на замер
+          </a>
+          <a href="#features" class="bg-white text-slate-800 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition-all">
+            Нам доверяют
+          </a>
+        </div>
+      </div>
     </section>
-    <section class="py-12 bg-gray-50">
-       <div class="container mx-auto px-4 text-center">
-         <a href="https://wa.me/79990000000" class="inline-block bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg">Заказать расчет в WhatsApp</a>
-       </div>
+
+    <!-- Services Section -->
+    <section class="py-20 px-6 max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Наши услуги в Находке</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="p-8 border border-gray-200 rounded-2xl bg-white shadow-sm">
+          <h3 class="text-2xl font-bold text-blue-600 mb-4">Кухни на заказ</h3>
+          <p class="text-gray-600">Создаем уникальные кухонные гарнитуры по вашим размерам. Используем только лучшие материалы: МДФ и ЛДСП EGGER. Каждая деталь продумана до мелочей.</p>
+        </div>
+        <div class="p-8 border border-gray-200 rounded-2xl bg-white shadow-sm">
+          <h3 class="text-2xl font-bold text-blue-600 mb-4">Шкафы и гардеробные</h3>
+          <p class="text-gray-600">Изготовление вместительных систем хранения в Находке. Оптимальное использование пространства и современный дизайн.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-6 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Почему выбирают нас?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center">
+            <div class="text-4xl mb-4">🏭</div>
+            <h3 class="text-xl font-bold mb-3">Своё производство</h3>
+            <p class="text-gray-600">Работаем напрямую, исключая лишние наценки посредников.</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center">
+            <div class="text-4xl mb-4">💎</div>
+            <h3 class="	text-xl font-bold mb-3">Премиум качество</h3>
+            <p class="text-gray-600">Используем только проверенные материалы: МДФ и ЛДСП EGGER.</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center">
+            <div class="text-4xl mb-4">🚚</div>
+            <h3 class="text-xl font-bold mb-3">Доставка в Находку</h3>
+            <p class="text-gray-600">Быстрая и бережная доставка мебели прямо к вашему дому.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="py-20 bg-blue-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-10 text-gray-90	0">Рассчитайте стоимость мебели за 1 минуту</h2>
+        <QuizWidget />
+      </div>
+    </section>
+
+    <Reviews />
+    <Coverage />
+
+    <!-- CTA Section -->
+    <section id="contact" class="bg-blue-600 py-16 px-6 text-white text-center">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Готовы создать мебель вашей мечты?</h2>
+        <p class="text-xl mb-10 opacity-90">Оставьте заявку на бесплатный замер и расчёт стоимости прямо сейчас!</p>
+        <a href="https://wa.me/79990000000" class="inline-block bg-white text-blue-600 hover:bg-gray-100 px-10 py-5 rounded-full font-black text-xl transition-transform hover:scale-105">
+          Получить расчёт стоимости
+        </a>
+      </div>
     </section>
   </main>
 </MainLayout>
