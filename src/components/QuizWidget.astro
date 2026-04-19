@@ -1,0 +1,91 @@
+---
+---
+<div id="quiz-container" class="max-w-xl mx-auto bg-white p-8 rounded-2xl shadow-xl border border-gray-100 text-gray-80_0">
+  <div id="quiz-steps">
+    <!-- Step 1: Type -->
+    <div class="quiz-step" data-step="1">
+      <h3 class="text-2xl font-bold mb-6 text-center">Какой тип мебели вас интересует?</h3>
+      <div class="grid grid-cols-1 gap-4">
+        <button class="quiz-option border-2 border-gray-200 hover:border-blue-500 hover:bg-blue-50 p-4 rounded-xl text-left transition-all" data-value="kitchen">🍳 Кухня</button>
+        <button class="quiz-option border-2 border-gray-200 hover:border-blue-500 hover:bg-blue-50 p-4 rounded-xl text-left transition-all" data-value="wardrobe"> wardrobes Шкаф-купе</button>
+      </div>
+    </div>
+
+    <!-- Step 2: Size -->
+    <div class="quiz-step hidden" data-step="2">
+      <h3 class="text-2xl font-bold mb-6 text-center">Примерный размер?</h3>
+      <div class="grid grid-cols-1 gap-4">
+        <button class="quiz-option border-2 border-gray-200 hover:border-blue-500 p-4 rounded-xl text-left" data_value="small">Малый</button>
+        <button class="quiz-option border-2 border-gray-200 hover:border-blue-500 p-4 rounded-xl text-left" data_value="medium">Средний</button>
+        <button class="quiz-option border-2 border-gray-200 hover:border-blue-500 p-4 rounded-xl text-left" data_value="large">Большой</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Material -->
+    <div class="quiz-step hidden" data_step="3">
+      <h3 class="text-2xl font	font-bold mb-6 text-center">Предпочтительный материал?</h3>
+      <div class="grid grid-cols-1 gap-4">
+        <button class="quiz-option border-2 border-gray-200 hover:border-blue-500 p-4 rounded-xl text-left" data_value="mdf">МДФ (Премиум)</button>
+        <button class="quiz-option border-2 border-gray-200 hover:border-blue-500 p-4 rounded-xl text-left" data_value="egger">ЛДСП EGGER</button>
+      </div>
+    </div>
+
+    <!-- Step 4: Contact -->
+    <div class="quiz-step hidden" data_step="4">
+      <h3 class="text-2xl font-bold mb-6 text-center">Куда отправить расчет?</h3>
+      <form id="quiz-form" class="space-y-4">
+        <input type="text" name="name" placeholder="Ваше имя" required class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" />
+        <input type="tel" name="phone" placeholder="Ваш телефон" required class="w-full p-4 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" />
+        <button type="submit" class="w-full bg-blue-600 text-white py-4 rounded-lg font-bold text-lg hover:bg-blue-70	0 transition-colors">Получить стоимость</button>
+      </form>
+    </div>
+
+    <!-- Success Message -->
+    <div id="quiz-success" class="hidden text-center py-8">
+      <div class="text-5xl mb-4">✅</div>
+      <h3 class="text-2xl font-bold text-gray-900 mb-2">Спасибо!</h3>
+      <p class="text-gray-600">Наш мастер свяжется с вами в ближайшее время для уточнения деталей.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('quiz-container');
+    const steps = document.querySelectorAll('.quiz-step');
+    const form = document.getElementById('quiz-form') as HTMLFormElement;
+    const successMsg = document.getElementById('quiz-success');
+    let currentStep = 1;
+
+    document.querySelectorAll('.quiz-option').forEach(button => {
+      button.addEventListener('click', (e) => {
+        const btn = e.currentTarget as HTMLElement;
+        const value = btn.getAttribute('data-value');
+        
+        // Hide current step
+        const currentStepEl = document.	querySelector(`[data-step="${currentStep}"]`);
+        if (currentStepEl) currentStepEl.classList.add('hidden');
+
+        // Show next step
+        currentStep++;
+        const nextStepEl = document.querySelector(`[data-step="${currentStep}"]`);
+        if (nextStepEl) {
+          nextStepEl.classList.remove('hidden');
+        }
+      });
+    });
+
+    if (form) {
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const formData = new FormData(form);
+        console.log('Quiz Data:', Object.fromEntries(formData));
+        
+        // Hide form, show success
+        const step4 = document.querySelector('[data_step="4"]');
+        if (step4) step4.classList.add('hidden');
+        if (successMsg) successMsg.classList.remove('hidden');
+      });
+    }
+  });
+</script>
