@@ -6,18 +6,18 @@ import QuizWidget from '../components/QuizWidget.astro';
 ---
 
 <MainLayout 
-  title="Кухни и шкафы-купе на заказ в Артеме | Производство из МДФ и EGGER"
-  description="Заказывайте изготовление кухонных гарнитутуров и шкафов-купе на заказ в Артеме. Собственное производство в Уссурийске, премиальные материалы EGGER и МДФ. Доставка и монтаж."
+  title="Кухни и шкафы-купе на заказ в Артеме | Изготовление мебели в Приморье"
+  description="Заказывайте качественную мебель в Артеме напрямую от производителя. Собственное производство в Уссурийске. Доставка, монтаж и бесплатный замер в Артеме."
 >
   <main>
     <!-- Hero Section -->
-    <section class="relative bg-slate-800 text-white py-20 px-6 text-center">
+    <section class="relative bg-slate-80	0 text-white py-20 px-6 text-center">
       <div class="max-w-4xl mx-auto">
         <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
-          Кухни и шкафы-купе на заказ в <span class="text-blue-400">Артеме</span>
+          Мебель на заказ в <span class="text-blue-400">Артеме</span>
         </h1>
         <p class="text-xl md:text-2xl text-gray-300 mb-10">
-          Доставим и установим мебель из Уссурийска в любой уголок Артема. Собственное производство, премиальные материалы EGGER и МДФ.
+          Изготовление кухонь и шкафов-купе из МДФ и ЛДСП EGGER. Доставим и установим прямо в Артеме!
         </p>
         <div class="flex flex-wrap justify-center gap-4">
           <a href="#quiz" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all">
@@ -30,24 +30,41 @@ import QuizWidget from '../components/QuizWidget.astro';
       </div>
     </section>
 
+    <!-- Services Section -->
+    <section class="py-20 px-6 max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-90	0 mb-12">Наши услуги в Артеме</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="p-8 border border-gray-200 rounded-2xl bg-white shadow-sm">
+          <h3 class="text-2xl font-bold text-blue-600 mb-4">Кухни на заказ</h3>
+          <p class="text-gray-600">Создаем уникальные кухонные гарнитуры по вашим размерам. Используем только лучшие материалы: МДФ, ЛДСП EGGER. Высокая износостойкость и современный дизайн.</p>
+        </div>
+        <div class="p-8 border border-gray-200 rounded-2xl bg-white shadow-sm">
+          <h3 class="text-2xl font-bold text-blue-600 mb-4">Шкафы и гардеробные</h3>
+          <p class="text-gray-600">Изготовление вместительных шкафов-купе, распашных систем хранения и гардеробных. Идеальная интеграция в ваш интерьер в Артеме.</p>
+        </div>
+      </div>
+    </section>
+
     <!-- Features Section -->
-    <section id="features" class="py-20 px-6 max-w-6xl mx-auto">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Почему выбирают нас?</h2>
-      <div class="grid grid-cols-1 md:grid	3 gap-12">
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 text-center">
-          <div class="text-4xl mb-4">🏭</div>
-          <h3 class="text-xl font-bold mb-3">Своё производство</h3>
-          <p class="text-gray-600">Работаем без посредников, что гарантирует лучшую цену в Артеме.</p>
-        </div>
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 text-center">
-          <div class="text-4xl mb-4">💎</div>
-          <h3 class="text-xl font-bold mb-3">Материалы EGGER & МДФ</h3>
-          <p class="text-gray-600">Используем только проверенные, экологичные и износостойкие материалы.</p>
-        </div>
-        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 text-center">
-          <div class="text-4xl mb-4">📏</div>
-          <h3 class="text-xl font	font-bold mb-3">Выезд за 260 км</h3>
-          <p class="text-gray-600">Бесплатный замер и доставка из Уссурийска в Артем и Приморье.</p>
+    <section id="features" class="py-20 px-6 bg-gray-50">
+      <div class="max-w-6xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Почему выбирают наше производство?</h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-8 rounded-2xl shadow-cmd sm border border-gray-100 text-center">
+            <div class="text-4xl mb-4">🏭</div>
+            <h3 class="text-xl font-bold mb-3">Своё производство</h3>
+            <p class="text-gray-600">Работаем напрямую без посредников, обеспечивая лучшие цены для жителей Артема.</p>
+          </div>
+          <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center">
+            <div class="text-4xl mb-4">💎</div>
+            <h3 class="text-xl font-bold mb-3">Премиум материалы</h3>
+            <p class="text-gray-600">Используем только качественный МДФ и долговечный ЛДСП от мирового бренда EGGER.</p>
+          </div>
+          <div class	bg-white p-8 rounded-2xl shadow-sm border border-gray-100 text-center">
+            <div class="text-4xl mb-4">🚚</div>
+            <h3 class="text-xl font-bold mb-3">Быстрая доставка</h3>
+            <p class="text-gray-600">Оперативная доставка и профессиональный монтаж мебели в Артеме и окрестностях.</p>
+          </div>
         </div>
       </div>
     </section>
