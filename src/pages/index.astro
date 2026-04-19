@@ -2,6 +2,7 @@
 import MainLayout from '../layouts/MainLayout.astro';
 import Reviews from '../components/Reviews.astro';
 import Coverage from '../components/Coverage.astro';
+import QuizWidget from '../components/QuizWidget.astro';
 ---
 
 <MainLayout 
@@ -19,7 +20,7 @@ import Coverage from '../components/Coverage.astro';
           Собственное производство. Премиальные фасады из МДФ и долговечный ЛДСП EGGER.
         </p>
         <div class="flex flex-wrap justify-center gap-4">
-          <a href="https://wa.me/79990000000" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all">
+          <a href="#quiz" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all">
             Записаться на замер
           </a>
           <a href="#features" class="bg-white text-slate-800 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition-all">
@@ -32,7 +33,7 @@ import Coverage from '../components/Coverage.astro';
     <!-- Features Section -->
     <section id="features" class="py-20 px-6 max-w-6xl mx-auto">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Почему выбирают нас?</h2>
-      <div class="grid grid-cols-1 md:grid	3 gap-12">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
         <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 text-center">
           <div class="text-4xl mb-4">🏭</div>
           <h3 class="text-xl font-bold mb-3">Своё производство</h3>
@@ -44,10 +45,18 @@ import Coverage from '../components/Coverage.astro';
           <p class="text-gray-600">Используем только проверенные, экологичные и износостойкие материалы.</p>
         </div>
         <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 text-center">
-          <div class="text-4xl mb	4">📏</div>
+          <div class="text-4	4 mb-4">📏</div>
           <h3 class="text-xl font-bold mb-3">Выезд за 260 км</h3>
           <p class="text-gray-600">Бесплатный замер в Уссурийске, Владивостоке, Артеме и других городах края.</p>
         </div>
+      </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="py-20 bg-blue-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-10 text-gray-900">Рассчитайте стоимость мебели за 1 минуту</h2>
+        <QuizWidget />
       </div>
     </section>
 
