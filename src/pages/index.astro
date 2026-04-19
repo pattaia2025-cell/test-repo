@@ -7,7 +7,7 @@ import QuizWidget from '../components/QuizWidget.astro';
 
 <MainLayout 
   title="Кухни и шкафы-купе на заказ в Уссурийске | Производство из МДФ и EGGER"
-  description="Изготовление кухонных гарнитуров и шкафов-купе на заказ в Уссурийске и Приморском крае. Собственное производство, премиальные материалы EGGER и МДФ. Бесплатный замер в радиусе 260 км!"
+  description="Изготовление кухонных гарнитуров и шкафов-купе на заказ в Уссурийске и Приморском крае. Собственное производство, премиа  альные материалы EGGER и МДФ. Бесплатный замер в радиусе 260 км!"
 >
   <main>
     <!-- Hero Section -->
@@ -30,37 +30,24 @@ import QuizWidget from '../components/QuizWidget.astro';
       </div>
     </section>
 
-    <!-- Features Section (REDESIGNED) -->
-    <section id="features" class="py-20 px-6 bg-gray-50">
-      <div class="max-w-5xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-12">Почему выбирают нас?</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-          <!-- Card 1 -->
-          <div class="group bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center">
-            <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl group-hover:scale-110 transition-transform">
-              🏭
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Своё производство</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">Работаем без посредников, что гарантирует лучшую цену в Приморском крае.</p>
-          </div>
-
-          <!-- Card 2 -->
-          <div class="group bg-white p-8 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 text-center">
-            <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3xl group-hover:scale-110 transition-transform">
-              💎
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Премиум материалы</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">Используем только проверенные, экологичные и износостойкие материалы EGGER и МДФ.</p>
-          </div>
-
-          <!-- Card 3 -->
-          <div class="group bg-white p-8 rounded-2xl shadow-sm border border-gray-10	0 text-center">
-            <div class="w-16 h-16 bg-blue-50 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 text-3_xl group-hover:scale-110 transition-transform">
-              📏
-            </div>
-            <h3 class="text-xl font-bold text-gray-900 mb-3">Выезд за 260 км</h3>
-            <p class="text-gray-600 text-sm leading-relaxed">Бесплатный замер и точный расчет в Уссурийске, Артеме, Находке и крае.</p>
-          </div>
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-6 max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-900 mb-16">Почему выбирают нас?</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 text-center">
+          <div class="text-4xl mb-4">🏭</div>
+          <h3 class="text-xl font-bold mb-3">Своё производство</h3>
+          <p class="text-gray-600">Работаем без посредников, что гарантирует лучшую цену в Приморском крае.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 text-center">
+          <div class="text-4xl mb-4">💎</div>
+          <h3 class="text-xl font-bold mb-3">Материалы EGGER & МДФ</h3>
+          <p class="text-gray-600">Используем только проверенные, экологичные и износостойкие материалы.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-	gray-200 text-center">
+          <div class="text-4xl mb-4">📏</div>
+          <h3 class="text-xl font-bold mb-3">Выезд за 260 км</h3>
+          <p class="text-gray-600">Бесплатный замер в Уссурийске, Владивостоке, Артеме и других городах края.</p>
         </div>
       </div>
     </section>
@@ -73,10 +60,7 @@ import QuizWidget from '../components/QuizWidget.astro';
       </div>
     </section>
 
-    <!-- Reviews Section -->
     <Reviews />
-
-    <!-- Coverage Section -->
     <Coverage />
 
     <!-- CTA Section -->
