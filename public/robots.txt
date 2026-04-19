@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://test-repo-1dh.pages.dev/sitemap-index.xml
