@@ -1,7 +1,7 @@
 import { defineConfig } from 'astro/config';
 import tailwind from '@astrojs/tailwind';
-import sitemap from '@astrojs/sitemap';
 
 export default defineConfig({
-  integrations: [tailwind(), sitemap()],
+  site: 'https://test-repo-1dh.pages.dev/',
+  integrations: [tailwind()],
 });
