@@ -1,20 +1,77 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import Reviews from '../components/Reviews.astro';
+import Coverage from '../components/Coverage.astro';
+import QuizWidget from '../components/QuizWidget.astro';
 ---
 
 <MainLayout 
   title="Кухни и шкафы-купе на заказ в Артеме | Производство из МДФ и EGGER"
-  description="Изготовление кухонных гарнитуров и шкафов-купе на заказ в Артеме. Собственное производство в Уссурийске, премиальные материалы EGGER и МДФ. Доставка и монтаж."
+  description="Заказывайте изготовление кухонных гарнитутуров и шкафов-купе на заказ в Артеме. Собственное производство в Уссурийске, премиальные материалы EGGER и МДФ. Доставка и монтаж."
 >
   <main>
-    <section class="py-20 px-6 text-center bg-white">
-      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6">Кухни и шкафы-купе на заказ в <span class="text-blue-600">Артеме</span</h1>>
-      <p class="text-xl text-gray-600 max-w-3xl mx-auto">Высокое качество мебели из Уссурийска с доставкой в Артем. Работаем с МДФ и ЛДСП EGGER. Точный за																															      замер и расчет стоимости.</p>
+    <!-- Hero Section -->
+    <section class="relative bg-slate-800 text-white py-20 px-6 text-center">
+      <div class="max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
+          Кухни и шкафы-купе на заказ в <span class="text-blue-400">Артеме</span>
+        </h1>
+        <p class="text-xl md:text-2xl text-gray-300 mb-10">
+          Доставим и установим мебель из Уссурийска в любой уголок Артема. Собственное производство, премиальные материалы EGGER и МДФ.
+        </p>
+        <div class="flex flex-wrap justify-center gap-4">
+          <a href="#quiz" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all">
+            Записаться на замер
+          </a>
+          <a href="#features" class="bg-white text-slate-800 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition-all">
+            Наши преимущества
+          </a>
+        </div>
+      </div>
     </section>
-    <section class="py-12 bg-gray-50">
-       <div class="container mx-auto px-4 text-center">
-         <a href="https://wa.me/79990000000" class="inline-block bg-green-600 text-white px-8 py-4 rounded-full font-bold text-lg">Заказать расчет в WhatsApp</a>
-       </div>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-6 max-w-6xl mx-auto">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Почему выбирают нас?</h2>
+      <div class="grid grid-cols-1 md:grid	3 gap-12">
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 text-center">
+          <div class="text-4xl mb-4">🏭</div>
+          <h3 class="text-xl font-bold mb-3">Своё производство</h3>
+          <p class="text-gray-600">Работаем без посредников, что гарантирует лучшую цену в Артеме.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 text-center">
+          <div class="text-4xl mb-4">💎</div>
+          <h3 class="text-xl font-bold mb-3">Материалы EGGER & МДФ</h3>
+          <p class="text-gray-600">Используем только проверенные, экологичные и износостойкие материалы.</p>
+        </div>
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 text-center">
+          <div class="text-4xl mb-4">📏</div>
+          <h3 class="text-xl font	font-bold mb-3">Выезд за 260 км</h3>
+          <p class="text-gray-600">Бесплатный замер и доставка из Уссурийска в Артем и Приморье.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz" class="py-20 bg-blue-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-10 text-gray-900">Рассчитайте стоимость мебели за 1 минуту</h2>
+        <QuizWidget />
+      </div>
+    </section>
+
+    <Reviews />
+    <Coverage />
+
+    <!-- CTA Section -->
+    <section id="contact" class="bg-blue-600 py-16 px-6 text-white text-center">
+      <div class="max-w-3xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold mb-6">Готовы создать мебель вашей мечты?</h2>
+        <p class="text-xl mb-10 opacity-90">Оставьте заявку на бесплатный замер и расчёт стоимости прямо сейчас!</p>
+        <a href="https://wa.me/79990000000" class="inline-block bg-white text-blue-600 hover:bg-gray-100 px-10 py-5 rounded-full font-black text-xl transition-transform hover:scale-105">
+          Получить расчёт стоимости
+        </a>
+      </div>
     </section>
   </main>
 </MainLayout>

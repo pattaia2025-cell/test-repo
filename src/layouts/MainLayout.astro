@@ -1,14 +1,16 @@
 ---
 import StructuredData from '../components/StructuredData.astro';
+import Footer from '../components/Footer.astro';
 ---
+
 <!DOCTYPE html>
 <html lang='ru'>
   <head>
     <meta charset='utf-8' />
-    <meta name='viewport' content='width=device-width' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
     <title>Кухни и шкафы-купе на заказ в Уссурскe | Производство из МДФ и EGGER</title>
-    <meta name='description' content='Изготовление кухонных гарнитуров и шкафов-купе на заказ в Уссурскe и Приморском крае. Собственное производство, премиальные материалы EGGER и МДФ. Бесплатный замер в радиусе 260 км!' />
+    <meta name='description' content='Изготовление кухонных гарнитуров и шкафов-купе на заказ в Уссурскe и Приморском крае. Собственное производство, премиальные материалы EGGER и МДФ. Бесплатный замер в радиусе 26	60 км!' />
     <meta property='og:type' content='website' />
     <meta property='og:title' content='Кухни и шкафы-купе на заказ в Уссурскe' />
     <meta property='og:description' content='Изготовление кухонных гарнитуров и шкафов-купе на заказ в Уссурскe и Приморском крае.' />
@@ -18,5 +20,6 @@ import StructuredData from '../components/StructuredData.astro';
   </head>
   <body class='bg-gray-50 text-gray-900 font-sans'>
     <slot />
+    <Footer />
   </body>
 </html>
