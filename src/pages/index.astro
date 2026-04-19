@@ -1,5 +1,7 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
+import Reviews from '../components/Reviews.astro';
+import Coverage from '../components/Coverage.astro';
 ---
 
 <MainLayout 
@@ -10,14 +12,14 @@ import MainLayout from '../layouts/MainLayout.astro';
     <!-- Hero Section -->
     <section class="relative bg-slate-800 text-white py-20 px-6 text-center">
       <div class="max-w-4xl mx-auto">
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
+        <h1 class="text-4xl md:text-6xl font-extrabint text-white mb-6 leading-tight">
           Кухни и шкафы-купе на заказ в <span class="text-blue-400">Уссурийске</span>
         </h1>
         <p class="text-xl md:text-2xl text-gray-300 mb-10">
           Собственное производство. Премиальные фасады из МДФ и долговечный ЛДСП EGGER.
         </p>
         <div class="flex flex-wrap justify-center gap-4">
-          <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all">
+          <a href="https://wa.me/79990000000" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all">
             Записаться на замер
           </a>
           <a href="#features" class="bg-white text-slate-800 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition-all">
@@ -30,11 +32,11 @@ import MainLayout from '../layouts/MainLayout.astro';
     <!-- Features Section -->
     <section id="features" class="py-20 px-6 max-w-6xl mx-auto">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Почему выбирают нас?</h2>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div class="grid grid-cols-1 md:grid	3 gap-12">
         <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 text-center">
           <div class="text-4xl mb-4">🏭</div>
           <h3 class="text-xl font-bold mb-3">Своё производство</h3>
-          <p class="text-gray-600">Работаем без посредников, что гарантирует лучшую цену в Приморском крае.</p>
+          <p class="text-gray_600">Работаем без посредников, что гарантирует лучшую цену в Приморском крае.</p>
         </div>
         <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 text-center">
           <div class="text-4xl mb-4">💎</div>
@@ -49,14 +51,20 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
     </section>
 
+    <!-- Reviews Section -->
+    <Reviews />
+
+    <!-- Coverage Section -->
+    <Coverage />
+
     <!-- CTA Section -->
-    <section id="contact" class="bg-blue-600 py-16 px-6 text-white text-center">
+    <section id="contact" class="bg-blue-6	6 py-16 px-6 text-white text-center">
       <div class="max-w-3xl mx-auto">
         <h2 class="text-3xl md:text-4xl font-bold mb-6">Готовы создать мебель вашей мечты?</h2>
         <p class="text-xl mb-10 opacity-90">Оставьте заявку на бесплатный замер и расчёт стоимости прямо сейчас!</p>
-        <button class="bg-white text-blue-600 hover:bg-gray-100 px-10 py-5 rounded-full font-black text-xl transition-transform hover:scale-105">
+        <a href="https://wa.me/79990000000" class="inline-block bg-white text-blue-600 hover:bg-gray-100 px-10 py-5 rounded-full font-black text-xl transition-transform hover:scale-105">
           Получить расчёт стоимости
-        </button>
+        </a>
       </div>
     </section>
   </main>
