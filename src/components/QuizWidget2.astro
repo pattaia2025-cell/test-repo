@@ -114,12 +114,26 @@
         }
         const formData = new FormData(form);
         const data = Object.fromEntries(formData.entries());
+        
         try {
-          const response = await fetch('/api/quiz', {
+          // Формируем сообщение для Telegram
+          const message = `📋 *Новая заявка с квиза!*
+👤 *Имя:* ${data.name}
+📞 *Телефон:* ${data.phone}
+🛠 *Тип мебели:* ${data.type}
+📏 *Размер:* ${data.size}
+✨ *Материал:* ${data.material}`;
+
+          const response = await fetch(`https://api.telegram.org/bot8605819491:AAGo38dYfm_EVkkmKGG3YKP65WJ19g1RLy8/sendMessage`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data),
+            body: JSON.stringify({
+              chat_id: '5232135852',
+              text: message,
+              parse_mode: 'Markdown'
+            })
           });
+
           if (response.ok) {
             form.reset();
             if (messageBox) {
@@ -133,7 +147,7 @@
               }
             }, 3000);
           } else {
-            throw new Error();
+            throw new Error('Telegram API error');
           }
         } catch (error) {
           if (messageBox) {
