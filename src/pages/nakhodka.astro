@@ -1,13 +1,11 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-//import Reviews from '../components/Reviews.astro';
-//import Coverage from '../components/Coverage.astro';
-import QuizWidget from '../components/QuizWidget2.astro';
+import QuizWidget2 from '../components/QuizWidget2.astro';
 ---
 
 <MainLayout 
-  title="Кухни и шкафы-купе на заказ в Находке | Производство из МДФ и EGGER"
-  description="Заказывайте изготовление мебели в Находке напрямую от производителя. Собственное производство в Уссурийске. Доставка, монтаж и бесплатный замер в Находке."
+  title="Кухни и шкафы-купе на заказ в Находке | Изготовление мебели в Приморье"
+  description="Заказывайте изготовление мебели в Находке напрямую от производителя. Собственное производство в Уссурийске. Бесплатный замер и доставка в Находке."
 >
   <main>
     <!-- Hero Section -->
@@ -33,10 +31,10 @@ import QuizWidget from '../components/QuizWidget2.astro';
     <!-- Features Section -->
     <section id="features" class="py-20 px-6 max-w-6xl mx-auto">
       <h2 class="text-3xl md:text-4xl font-bold text-center mb-16">Почему выбирают нас?</h2>
-      <div class="grid grid_cols-1 md:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 text-center">
           <div class="text-4xl mb-4">🏭</div>
-          <h3 class="text-xl font-	bold mb-3">Своё производство</h3>
+          <h3 class="text-xl font-bold mb-3">Своё производство</h3>
           <p class="text-gray-600">Работаем напрямую, что гарантирует лучшую цену в Находке.</p>
         </div>
         <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 text-center">
@@ -45,9 +43,9 @@ import QuizWidget from '../components/QuizWidget2.astro';
           <p class="text-gray-600">Используем только проверенные, экологичные и износостойкие материалы.</p>
         </div>
         <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 text-center">
-          <div class="text-4xl mb-4">🚚</div>
-          <h	<h3 class="text-xl font-bold mb-3">Доставка в Находку</h3>
-          <p class="text-gray-600">Оперативная доставка и профессиональный монтаж прямо к вашему дому.</p>
+          <div class="text-4xl mb-4">📏</div>
+          <h3 class="text-xl font-bold mb-3">Выезд за 260 км</h3>
+          <p class="text-gray-600">Бесплатный замер и доставка в Находке и Приморье.</p>
         </div>
       </div>
     </section>
@@ -55,11 +53,10 @@ import QuizWidget from '../components/QuizWidget2.astro';
     <!-- Quiz Section -->
     <section id="quiz" class="py-20 bg-blue-50">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-10 text-gray-90	0">Рассчитайте стоимость мебели за 1 минуту</h2>
+        <h2 class="text-3xl font-bold text-center mb-10 text-gray-900">Рассчитайте стоимость мебели за 1 минуту</h2>
         <QuizWidget2 />
       </div>
     </section>
-
 
     <!-- CTA Section -->
     <section id="contact" class="bg-blue-600 py-16 px-6 text-white text-center">
