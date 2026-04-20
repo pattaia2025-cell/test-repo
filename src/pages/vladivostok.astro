@@ -1,29 +1,27 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-//import Reviews from '../components/Reviews.astro';
-//import Coverage from '../components/Coverage.astro';
-import QuizWidget from '../components/QuizWidget2.astro';
+import QuizWidget2 from '../components/QuizWidget2.astro';
 ---
 
 <MainLayout 
-  title="Кухни и шкафы-купе на заказ в Владивостоке | Производство из МДФ и EGGER"
-  description="Заказывайте изготовление мебели во Владивостоке напрямую от производителя. Собственное производство в Уссурийске. Бесплатный замер и доставка во Владивосток."
+  title="Кухни и шкафы-купе на заказ во Владивостоке | Изготовление мебели в Приморье"
+  description="Заказывайте изготовление мебели во Владивостоке напрямую от производителя. Собственное производство в Уссурийске. Бесплатный замер и доставка во Владивостоке."
 >
   <main>
     <!-- Hero Section -->
     <section class="relative bg-slate-800 text-white py-20 px-6 text-center">
       <div class="max-w-4xl mx-auto">
         <h1 class="text-4xl md:text-5xl font-extrabold mb-6 leading-tight">
-          Кухни и шкафы-купе на заказ в <span class="text-blue-400">Владивостоке</span>
+          Кухни и шкафы-купе на заказ во <span class="text-blue-400">Владивостоке</span>
         </h1>
         <p class="text-xl md:text-2xl text-gray-300 mb-10">
-          Доставим и установим мебель из Уссурийска в любой уголок Владивостока. Собственное производство, премиальные материалы EGGER и МДФ.
+          Доставим и установим мебель из Уссурийска в любой район Владивостока. Собственное производство, премиальные материалы EGGER и МДФ.
         </p>
         <div class="flex flex-wrap justify-center gap-4">
           <a href="#quiz" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-bold text-lg transition-all">
             Записаться на замер
           </a>
-          <a href="#features" class="bg-white text-slate-800 hover:bg-gray-100 px-8 py	py-4 rounded-lg font-bold text-lg transition-all">
+          <a href="#features" class="bg-white text-slate-800 hover:bg-gray-100 px-8 py-4 rounded-lg font-bold text-lg transition-all">
             Наши преимущества
           </a>
         </div>
@@ -45,9 +43,9 @@ import QuizWidget from '../components/QuizWidget2.astro';
           <p class="text-gray-600">Используем только проверенные, экологичные и износостойкие материалы.</p>
         </div>
         <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-200 text-center">
-          	<div class="text-4xl mb-4">🚚</div>
-          <h3 class="text-xl font-bold mb-3">Доставка во Владивосток</h3>
-          <p class="text-gray-600">Оперативная доставка и профессиональный монтаж прямо к вашему дому.</p>
+          <div class="text-4xl mb-4">📏</div>
+          <h3 class="text-xl font-bold mb-3">Выезд за 260 км</h3>
+          <p class="text-gray-600">Бесплатный замер и доставка во Владивостоке и Приморье.</p>
         </div>
       </div>
     </section>
@@ -55,11 +53,10 @@ import QuizWidget from '../components/QuizWidget2.astro';
     <!-- Quiz Section -->
     <section id="quiz" class="py-20 bg-blue-50">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center mb-10 text-gray-90	0">Рассчитайте стоимость мебели за 1 минуту</h2>
+        <h2 class="text-3xl font-bold text-center mb-10 text-gray-900">Рассчитайте стоимость мебели за 1 минуту</h2>
         <QuizWidget2 />
       </div>
     </section>
-
 
     <!-- CTA Section -->
     <section id="contact" class="bg-blue-600 py-16 px-6 text-white text-center">
